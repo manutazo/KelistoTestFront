@@ -1,0 +1,17 @@
+// Colours
+$color-primary: #ECE6D3;
+$color-secondary: #d8d8d8;
+$color-grey: #D7CAB2;
+$color-grey-dark: #57483C;
+$color-white: #FFFFFF;
+// Breakpoints
+$mobile-landscape: 30rem; // 480px
+$tablet: 40rem; // 640px
+$tablet-wide: 48rem; // 768px
+$desktop: 64rem; // 1024px
+$widescreen: 71.25rem; // 1140px
+$margin-primary: 15rem;
+$base-spacing-unit: 1.5rem;
+$size-primary: 0;
+$size-secundary: 1rem;
+$susy: ( columns: 10, gutters: 1/12, container: 100.25rem, global-box-sizing: border-box, );

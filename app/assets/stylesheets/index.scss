@@ -1,0 +1,128 @@
+.items {
+    margin: $size-primary;
+    @extend %clearfix;
+    margin: 2rem $margin-primary;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: $size-primary;
+        right: $size-primary;
+        bottom: $size-primary;
+        left: $size-primary;
+    }
+}
+
+.item {
+    @include gallery(4);
+    position: relative;
+    background-color: $color-primary;
+    height: 8rem;
+    margin-bottom: gutter();
+
+    &:nth-last-child(-n+2) {
+        margin-bottom: $size-primary;
+    }
+    @media (min-width: $tablet) {
+         @include gallery(2.5);
+
+        &:nth-last-child(-n+3) {
+            margin-bottom: $size-primary;
+        }
+    }
+    @media (min-width: $desktop) {
+         @include gallery(2);
+
+        &:nth-last-child(-n+4) {
+            margin-bottom: $size-primary;
+        }
+    }
+}
+
+.site-hero {
+    margin-bottom: $base-spacing-unit;
+    padding-top: $base-spacing-unit;
+    background-color: $color-primary;
+}
+
+.hero-content:last-child {
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.hero-section {
+    padding-left: 18rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.hero-section h1 {
+    position: relative;
+    font-size: 25px;
+    color: #2E2925;
+}
+
+.hero-section h4 {
+    position: relative;
+    bottom: 3.5rem;
+    color: #968879;
+    font-size: 15px;
+}
+
+.hero-section button {
+    bottom: 4rem;
+    position: relative;
+    height: 2.5rem;
+    width: 15.5em;
+    background-color: #D7CAB2;
+    border: $size-primary;
+    color: white;
+    font-size: $size-secundary;
+}
+// Custom CSS for mobile
+@media only screen and (max-width: $mobile-landscape) {
+    .items {
+        margin: $size-primary $size-primary $size-primary $size-secundary;
+        -webkit-box-align: center;
+    }
+
+    .item:nth-child(2n + 2) {
+        margin-left: 49.31008%;
+    }
+
+    .item {
+        width: 46.53488%;
+    }
+
+    .hero-section button {
+        bottom: 3rem;
+        height: 3.5rem;
+        width: 18.5em;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: $size-primary;
+    }
+}
+// Custom CSS for tablet
+@media (min-width: $tablet-wide) and (max-width: $desktop) {
+    .items {
+        margin: $size-primary $size-secundary;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: $size-primary;
+    }
+
+    nav ul {
+        margin-left: 3rem;
+    }
+
+    footer {
+        height: 9rem;
+        margin-top: 4rem;
+    }
+}

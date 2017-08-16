@@ -1,0 +1,125 @@
+// header
+
+nav li a:hover {
+    background-color: $color-grey-dark;
+}
+
+nav li a:hover {
+    background-color: $color-grey-dark;
+}
+
+nav {
+    background-color: $color-grey;
+}
+
+footer {
+    background-color: $color-grey-dark;
+}
+
+footer {
+    @include span(full);
+    height: 4rem;
+    margin-top: gutter();
+}
+
+nav {
+    height: 3rem;
+}
+
+footer {
+    height: 6rem;
+    margin-top: 6rem;
+}
+
+footer ul,
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul {
+    margin-left: $margin-primary;
+}
+
+footer ul {
+    margin-left: 10rem;
+    padding-top: $base-spacing-unit;
+}
+
+footer li,
+nav li {
+    float: left;
+}
+
+footer li a,
+nav li a {
+    display: block;
+    color: $color-white;
+    text-align: center;
+    padding: 1rem 3rem;
+    text-decoration: none;
+}
+@media (min-width: $mobile-landscape) {
+    .nav-mobile {
+        display: none;
+    }
+}
+@media (max-width: $mobile-landscape) {
+    .navbar {
+        display: none;
+    }
+}
+// navbar mobile
+.icon-sidenav {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $color-grey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 2rem;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $color-white;
+    display: block;
+    transition: 0.3s;
+}
+
+.offcanvas a:focus,
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+@media (max-width: $mobile-landscape) {
+    footer ul {
+        padding: 0;
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    footer li a {
+        padding: 0.2rem 2rem;
+    }
+
+    footer {
+        margin-top: 1rem;
+    }
+}
+
+.active {
+    width: $margin-primary;
+    transition: 0.3s;
+}

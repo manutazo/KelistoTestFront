@@ -1,0 +1,42 @@
+%clearfix {
+    &:after,
+    &:before {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    @include container();
+}
+
+section {
+    @extend %clearfix;
+    margin-bottom: gutter();
+}
+
+body {
+    @font-face {
+        font-family: 'hoxtonnorth';
+        src: font-url('HoxtonNorth-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+/* Clearfix */
+.clear {
+    *zoom: 1;
+}
+
+a#pull {
+    display: none;
+}
